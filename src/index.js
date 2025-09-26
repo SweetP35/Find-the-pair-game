@@ -48,10 +48,10 @@ const renderCards = (array) => {
 		const card = `<div class="game__card" data-id="${array[i]}">
 						<div class="game__card-inner">
 							<div class="game__card-face game__card-front">
-								<img src="../img/question.svg" alt="card-front">
+								<img src="./src/assets/img/question.svg" alt="card-front">
 							</div>
 							<div class="game__card-face game__card-back">
-								<img src="../svg_card/${array[i]}.svg" alt="card-back">
+								<img src="./src/assets/svg_card/${array[i]}.svg" alt="card-back">
 							</div>
 						</div>
 					</div>`
@@ -148,7 +148,7 @@ const endGameVictory = () => {
 		timerElement.style.display = 'none';
 		gameCardWrap.innerHTML = '';
 		resultGame.result = 'Победа-победа, время обеда!!!';
-		resultGame.img = '../img/victory.svg';
+		resultGame.img = './src/assets/img/victory.svg';
 		resultGame.time = formatTime(timeValue-time);
 		renderResultGame();
 	};
@@ -185,7 +185,7 @@ const endGameDefeat = () => {
 	timerElement.style.display = 'none';
 	gameCardWrap.innerHTML = '';
 	resultGame.result = 'Увы и ах, вы проиграли...Loooooser!!!';
-	resultGame.img = '../img/defeat.svg';
+	resultGame.img = './src/assets/img/defeat.svg';
 	renderResultGame("defeat");
 }
 
